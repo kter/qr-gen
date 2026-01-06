@@ -1,0 +1,42 @@
+name: qr_gen_app
+description: "QR Code Generator Android App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+  
+  # QR Code generation
+  qr_flutter: ^4.1.0
+  
+  # State management
+  provider: ^6.1.2
+  
+  # Image saving
+  gal: ^2.3.0
+  permission_handler: ^11.3.1
+  
+  # SVG support
+  flutter_svg: ^2.0.10
+  
+  # Path utilities
+  path_provider: ^2.1.5
+  
+  # UI utilities
+  share_plus: ^10.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  generate: true
+  uses-material-design: true
