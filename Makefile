@@ -38,3 +38,14 @@ devices: ## List connected devices
 
 logs: ## Show Flutter logs
 	flutter logs
+
+test-golden: ## Run golden tests only
+	flutter test test/golden/ --tags=golden
+
+update-goldens: ## Update golden files
+	flutter test --update-goldens test/golden/
+
+setup-hooks: ## Install git pre-commit hook for auto-testing
+	cp scripts/pre-commit .git/hooks/pre-commit
+	chmod +x .git/hooks/pre-commit
+	@echo "✅ Pre-commit hook installed. Tests will run before each commit."

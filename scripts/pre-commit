@@ -1,0 +1,16 @@
+#!/bin/sh
+# Pre-commit hook for QR Generator
+# Runs tests before allowing commit
+
+echo "Running Flutter tests..."
+flutter test test/providers_test.dart test/widgets/ --reporter compact
+
+if [ $? -ne 0 ]; then
+    echo ""
+    echo "❌ Tests failed. Commit aborted."
+    echo "Fix the failing tests before committing."
+    exit 1
+fi
+
+echo "✅ All tests passed!"
+exit 0
